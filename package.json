@@ -1,0 +1,23 @@
+{
+  "name": "auto-readme",
+  "version": "1.0.0",
+  "description": "Generates a readme automatically with user input in node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxd66/auto-readme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxd66/auto-readme/issues"
+  },
+  "homepage": "https://github.com/maxd66/auto-readme#readme",
+  "dependencies": {
+    "inquirer": "^8.1.1"
+  }
+}
