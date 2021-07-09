@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown');
+const { table } = require('console');
 // TODO: Create an array of questions for user input
 const questions = ['What would you like the description to say?', 'What would you like the installation instructions to say?', 'What would you like the usage information?', 'What would you like the contribution guidelines to say?', 'What would you like the test instructions to say?'];
 
@@ -12,8 +13,9 @@ let includeContribution = true;
 let includeTest = true;
 
 function writeToFile(fileName, data) {
-    let completeResponse = `#${data.title}
-    ${data.username}, ${data.email}\n\n`;
+    let completeResponse = `# ${data.title}
+${data.username}, ${data.email}\n\n`; 
+
     const chosenLicense = generateMarkdown(data.license)
     completeResponse += `${chosenLicense}\n\n`;
     if (includeDescription) {
@@ -38,7 +40,8 @@ ${data.test}\n\n`
     }
     completeResponse += `## License
 This project is under the ${data.license}`
-    fs.appendFile(fileName, completeResponse, (err) => err ? console.log(err) : console.log('Success!'))
+
+    fs.writeFile(fileName, completeResponse, (err) => err ? console.log(err) : console.log('Success!'))
 }
 
 
