@@ -3,7 +3,7 @@ Generates a readme automatically with user input in node
 
 ## Description
 
-This weather dashboard is a convenient way to search a specific city and find the weather for that place. It will log the current weather and five day forecast. The website uses the open weather api to search for the weather. The background of the website also changes dynamically based on the user's time. There are currently four time periods respected. Night, Sunrise, Day, and Sunset.
+This is a readme auto generator that uses node and inquirer to gather inputs from a user a generate a readme using their inputs.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Once packages are installed, you can use node to call the index.js file and the 
 
 ## Credits
 
-Their was a tiny bit of starter code I received from the UCSD Coding Bootcamp Extension
+Their was a tiny bit of starter code I received from the UCSD Coding Bootcamp Extension. I also am using the inquirer plug in for node from npm.
 
 ## License
 
