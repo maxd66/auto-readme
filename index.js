@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const { table } = require('console');
 // TODO: Create an array of questions for user input
 const questions = ['What would you like the description to say?', 'What would you like the installation instructions to say?', 'What would you like the usage information?', 'What would you like the contribution guidelines to say?', 'What would you like the test instructions to say?'];
 
@@ -104,7 +103,7 @@ function init() {
         answers.contribution ? console.log('including contribution...') : includeContribution = false;
         answers.test ? console.log('including test...') : includeTest = false;
         // Adds opening line to readme based on git user name and email
-        writeToFile('generatedReadMe.md', answers);
+        writeToFile(`${answers.title}.md`, answers);
     })
 
 }
